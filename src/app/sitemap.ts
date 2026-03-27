@@ -1,10 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL, MENU_CATEGORIES } from "@/lib/constants";
-import { getAllBlogPosts } from "@/lib/sanity/queries";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const blogPosts = await getAllBlogPosts();
-
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
@@ -45,12 +42,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
-  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${SITE_URL}/news/${post.slug.current}`,
-    lastModified: new Date(post.publishedAt),
-    changeFrequency: "monthly" as const,
-    priority: 0.5,
-  }));
+  let blogPages: MetadataRoute.Sitemap = [];
+  try {
+    const { getAllBlogPosts } = await import("@/lib/sanity/queries");
+    const blogPosts = await getAllBlogPosts();
+    blogPages = blogPosts.map((post) => ({
+      url: `${SITE_URL}/news/${post.slug.current}`,
+      lastModified: new Date(post.publishedAt),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    }));
+  } catch {
+    // Sanity client may not be available during static build
+  }
 
   return [...staticPages, ...menuPages, ...blogPages];
 }
