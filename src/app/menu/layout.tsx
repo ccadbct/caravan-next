@@ -10,7 +10,7 @@ export default function MenuLayout({
   return (
     <>
       {/* Category Tabs */}
-      <nav className="sticky top-16 z-30 border-b border-cream-dark bg-white/95 backdrop-blur-sm lg:top-16">
+      <nav className="sticky top-14 z-30 border-b border-cream-dark bg-white">
         <Container>
           <div className="scrollbar-hide flex gap-1 overflow-x-auto py-3">
             {MENU_CATEGORIES.map((cat) => (

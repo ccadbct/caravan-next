@@ -21,7 +21,7 @@ export function Header() {
       <header
         className={`fixed top-0 right-0 left-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-warm-black/95 shadow-lg backdrop-blur-sm py-2"
+            ? "bg-warm-black shadow-lg py-2"
             : "bg-warm-black py-4"
         }`}
       >
@@ -92,7 +92,7 @@ export function Header() {
       <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} />
 
       {/* Spacer for fixed header */}
-      <div className={scrolled ? "h-16" : "h-20"} />
+      <div className={scrolled ? "h-14" : "h-20"} />
     </>
   );
 }
