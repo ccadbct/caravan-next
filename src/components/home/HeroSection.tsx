@@ -44,7 +44,7 @@ export function HeroSection() {
               Explore Our Menus
             </Button>
             <Button
-              href="https://order.caravanstatenisland.com"
+              href="https://order.plento.io/restaurant/caravan-restaurant-coffee"
               variant="outline"
               size="lg"
               className="border-white/30 text-white hover:border-amber hover:bg-amber hover:text-white"

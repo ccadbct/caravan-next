@@ -28,7 +28,7 @@ export function OrderSection() {
         </p>
         <div className="mt-10">
           <Button
-            href="https://order.caravanstatenisland.com"
+            href="https://order.plento.io/restaurant/caravan-restaurant-coffee"
             size="lg"
             external
           >

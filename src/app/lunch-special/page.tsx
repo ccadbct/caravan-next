@@ -54,7 +54,7 @@ export default function LunchSpecialPage() {
             </p>
             <div className="mt-8">
               <Button
-                href="https://order.caravanstatenisland.com"
+                href="https://order.plento.io/restaurant/caravan-restaurant-coffee"
                 size="lg"
                 external
               >
