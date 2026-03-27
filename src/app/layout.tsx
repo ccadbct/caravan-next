@@ -4,7 +4,12 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { JsonLd } from "@/components/ui/JsonLd";
-import { generateRestaurantSchema } from "@/lib/seo";
+import {
+  generateRestaurantSchema,
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateFAQSchema,
+} from "@/lib/seo";
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
@@ -76,6 +81,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const restaurantSchema = generateRestaurantSchema();
+  const localBusinessSchema = generateLocalBusinessSchema();
+  const webSiteSchema = generateWebSiteSchema();
+  const faqSchema = generateFAQSchema();
 
   return (
     <html
@@ -84,6 +92,9 @@ export default function RootLayout({
     >
       <head>
         <JsonLd data={restaurantSchema} />
+        <JsonLd data={localBusinessSchema} />
+        <JsonLd data={webSiteSchema} />
+        <JsonLd data={faqSchema} />
       </head>
       <body className="flex min-h-full flex-col font-body text-foreground">
         <Header />

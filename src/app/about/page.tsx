@@ -35,7 +35,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-[50vh] items-center overflow-hidden">
+      <section className="relative -mt-20 flex min-h-[50vh] items-center overflow-hidden pt-20">
         <Image
           src="/images/food/interior-of-caravan-restaurant.jpg"
           alt="Inside Caravan Restaurant"

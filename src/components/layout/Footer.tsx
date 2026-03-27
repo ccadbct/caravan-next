@@ -100,21 +100,36 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
+          {/* Contact — with microdata for local SEO */}
+          <div
+            itemScope
+            itemType="https://schema.org/Restaurant"
+          >
             <h3 className="mb-5 text-xs font-semibold tracking-widest text-amber uppercase">
               Contact
             </h3>
+            <meta itemProp="name" content={BUSINESS.name} />
             <div className="space-y-3 text-sm text-white/50">
-              <p>{BUSINESS.address.full}</p>
+              <p
+                itemProp="address"
+                itemScope
+                itemType="https://schema.org/PostalAddress"
+              >
+                <span itemProp="streetAddress">{BUSINESS.address.street}</span>,{" "}
+                <span itemProp="addressLocality">{BUSINESS.address.city}</span>,{" "}
+                <span itemProp="addressRegion">{BUSINESS.address.state}</span>{" "}
+                <span itemProp="postalCode">{BUSINESS.address.zip}</span>
+              </p>
               <a
                 href={`tel:${BUSINESS.phoneRaw}`}
+                itemProp="telephone"
                 className="block transition-colors hover:text-amber-light"
               >
                 {BUSINESS.phone}
               </a>
               <a
                 href={`mailto:${BUSINESS.email}`}
+                itemProp="email"
                 className="block transition-colors hover:text-amber-light"
               >
                 {BUSINESS.email}

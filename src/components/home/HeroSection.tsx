@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[85vh] items-center overflow-hidden">
+    <section className="relative -mt-20 flex min-h-[85vh] items-center overflow-hidden pt-20">
       {/* Background image */}
       <Image
         src="/images/food/steak-on-a-grill.jpg"

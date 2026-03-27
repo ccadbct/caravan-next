@@ -47,7 +47,7 @@ export function Header() {
           </button>
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/branding/logo.svg"
               alt="Caravan Restaurant & Coffee"
@@ -56,13 +56,6 @@ export function Header() {
               className="transition-all duration-300"
               priority
             />
-            <span
-              className={`hidden font-display font-light tracking-wider text-white transition-all duration-300 sm:block ${
-                scrolled ? "text-lg" : "text-xl"
-              }`}
-            >
-              CARAVAN
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -77,7 +70,7 @@ export function Header() {
             href={BUSINESS.googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 border border-amber/30 px-4 py-2 text-xs font-medium tracking-wider text-amber-light uppercase transition-colors hover:border-amber hover:bg-amber/10 sm:flex"
+            className="flex shrink-0 items-center gap-2 border border-amber/30 px-4 py-2 text-xs font-medium tracking-wider text-amber-light whitespace-nowrap uppercase transition-colors hover:border-amber hover:bg-amber/10"
           >
             <svg
               width="14"
@@ -90,7 +83,8 @@ export function Header() {
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
               <circle cx="12" cy="10" r="3" />
             </svg>
-            <span className="hidden md:inline">317 Sand Lane, SI</span>
+            <span className="hidden sm:inline">317 Sand Lane, Staten Island</span>
+            <span className="sm:hidden">317 Sand Lane, SI</span>
           </a>
         </div>
       </header>

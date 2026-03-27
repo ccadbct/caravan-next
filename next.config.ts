@@ -24,13 +24,28 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/appetizers",
-        destination: "/menu/appetizers",
+        destination: "/menu/eastern-european",
         permanent: true,
       },
-      { source: "/salads", destination: "/menu/salads", permanent: true },
+      { source: "/salads", destination: "/menu/eastern-european", permanent: true },
       {
         source: "/soups---sides",
-        destination: "/menu/soups-and-sides",
+        destination: "/menu/eastern-european",
+        permanent: true,
+      },
+      {
+        source: "/menu/appetizers",
+        destination: "/menu/eastern-european",
+        permanent: true,
+      },
+      {
+        source: "/menu/salads",
+        destination: "/menu/eastern-european",
+        permanent: true,
+      },
+      {
+        source: "/menu/soups-and-sides",
+        destination: "/menu/eastern-european",
         permanent: true,
       },
       {

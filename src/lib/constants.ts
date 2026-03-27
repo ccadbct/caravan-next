@@ -21,42 +21,42 @@ export const BUSINESS = {
     lng: -74.0703431,
   },
   googleMapsUrl:
-    "https://www.google.com/maps/place/Caravan+Restaurant+%26+Coffee/@40.5922075,-74.0703431,17z",
+    "https://www.google.com/maps/place/Caravan+Restaurant+%26+Coffee/data=!4m2!3m1!1s0x89c24ee2e50cc7a7:0x21b8973ecf92651a?sa=X&ved=1t:242&hl=en&ictx=111",
   whatsappUrl: "https://wa.me/19173978435",
   cuisines: ["Uzbek", "Korean", "Eastern European", "Central Asian"],
   priceRange: "$$",
+  openingHours: [
+    { days: "Monday", hours: "Closed" },
+    { days: "Tuesday", hours: "Closed" },
+    { days: "Wednesday", hours: "Closed" },
+    { days: "Thursday", hours: "10:00 AM – 8:00 PM" },
+    { days: "Friday", hours: "10:00 AM – 10:00 PM" },
+    { days: "Saturday", hours: "10:00 AM – 10:00 PM" },
+    { days: "Sunday", hours: "10:00 AM – 8:00 PM" },
+  ],
+  openingHoursSchema: [
+    "Th 10:00-20:00",
+    "Fr-Sa 10:00-22:00",
+    "Su 10:00-20:00",
+  ],
+  socialProfiles: {
+    google:
+      "https://www.google.com/maps/place/Caravan+Restaurant+%26+Coffee/data=!4m2!3m1!1s0x89c24ee2e50cc7a7:0x21b8973ecf92651a",
+  },
 } as const;
 
 export const MENU_CATEGORIES = [
   {
     name: "Eastern European",
     slug: "eastern-european",
-    description: "Classic Eastern European dishes with a modern twist",
+    description: "Classic Eastern European dishes crafted with care and tradition",
     icon: "/images/icons/europe-map.svg",
   },
   {
     name: "Central Asian",
     slug: "central-asian",
-    description: "Authentic Uzbek and Korean flavors from the Silk Road",
+    description: "Authentic Uzbek and Korean flavors from the heart of the Silk Road",
     icon: "/images/icons/uzbekistan-map.svg",
-  },
-  {
-    name: "Appetizers",
-    slug: "appetizers",
-    description: "Cold and hot starters to begin your meal",
-    icon: "/images/icons/catering-table.svg",
-  },
-  {
-    name: "Salads",
-    slug: "salads",
-    description: "Fresh salads with Korean and Uzbek influences",
-    icon: "/images/icons/central-asian-salad.svg",
-  },
-  {
-    name: "Soups & Sides",
-    slug: "soups-and-sides",
-    description: "Hearty soups and flavorful side dishes",
-    icon: "/images/icons/soup.svg",
   },
   {
     name: "Coffees & Drinks",

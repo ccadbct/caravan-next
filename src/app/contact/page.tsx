@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-warm-black py-20 lg:py-24">
+      <section className="-mt-20 bg-warm-black pt-32 pb-20 lg:pt-36 lg:pb-24">
         <Container>
           <div className="max-w-xl">
             <div className="mb-6 flex items-center gap-4">
