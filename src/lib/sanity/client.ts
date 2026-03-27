@@ -3,9 +3,12 @@ import imageUrlBuilder from "@sanity/image-url";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type SanityImageSource = any;
 
+const PROJECT_ID = "8hhsgkkm";
+const DATASET = "production";
+
 export const sanityClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "8hhsgkkm",
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
+  projectId: PROJECT_ID,
+  dataset: DATASET,
   apiVersion: "2024-01-01",
   useCdn: true,
   token: process.env.SANITY_API_TOKEN,
